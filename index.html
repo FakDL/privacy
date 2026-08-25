@@ -5,24 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Политика конфиденциальности</title>
 <style>
+  /* Light theme first, dark overrides last. Order matters: these rules have equal specificity,
+     so anything declared after the media query would win in both themes - which is exactly how
+     the package name ended up as light text on a light chip. */
   :root { color-scheme: light dark; }
   body {
     max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
     font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #1c2230; background: #ffffff;
   }
-  @media (prefers-color-scheme: dark) {
-    body { color: #e6ecf5; background: #0f131c; }
-    a { color: #6fe3c4; }
-    code { background: #1c2230; }
-  }
   h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .35rem; }
   h2 { font-size: 1.15rem; margin: 2.2rem 0 .6rem; }
-  .updated { color: #8a95a8; margin: 0 0 2rem; }
+  .updated { color: #6b7482; margin: 0 0 2rem; }
   ul { padding-left: 1.2rem; }
   li { margin: .35rem 0; }
-  code { padding: .1rem .35rem; border-radius: .25rem; background: #f0f2f6; }
-  a { color: #0b7a63; }
+  a { color: #0b6b57; }
+  code {
+    padding: .1rem .35rem; border-radius: .25rem;
+    background: #eef0f4; color: #1c2230;
+    font-family: ui-monospace, "SF Mono", Consolas, "Liberation Mono", monospace; font-size: .95em;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6ecf5; background: #0f131c; }
+    .updated { color: #8a95a8; }
+    a { color: #6fe3c4; }
+    code { background: #1c2230; color: #cfe6dd; }
+  }
 </style>
 </head>
 <body>
